@@ -34,8 +34,15 @@
   .eyebrow { font-size: 12px; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; color: var(--label); }
 
   /* ---------- Hero ---------- */
-  .hero { position: relative; color: #fff; background: linear-gradient(180deg, var(--royal-2), var(--royal) 45%, var(--royal-deep)); overflow: hidden; }
-  .hero::before { content: ""; position: absolute; inset: 0; background: radial-gradient(60% 50% at 80% 10%, rgba(255,255,255,.12), transparent 70%); pointer-events: none; }
+  /* Hero: the Riviera golf course behind the logo, greeting and title (Tito's request).
+     A light royal tint keeps the greens natural while the white text stays readable. */
+  .hero { position: relative; color: #fff; overflow: hidden;
+    background: linear-gradient(180deg, rgba(21,24,134,.70) 0%, rgba(21,24,134,.36) 35%, rgba(21,24,134,.40) 70%, rgba(20,23,128,.88) 100%), url('assets/riviera.jpg') center 62% / cover var(--royal-deep); }
+  .hero::before { content: ""; position: absolute; inset: 0; background: radial-gradient(70% 80% at 72% 50%, rgba(14,17,90,.35), transparent 70%); pointer-events: none; }
+  .hero .greet, .hero h1 { text-shadow: 0 2px 14px rgba(8,10,60,.75); }
+  .hero .logo { filter: drop-shadow(0 0 3px rgba(8,10,60,.85)) drop-shadow(0 10px 24px rgba(8,10,60,.55)) !important; }
+  .hero .chip { background: rgba(14,17,90,.55); }
+  .hero .countdown div { background: rgba(14,17,90,.55); }
   .hero .wrap { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: 40px; align-items: center; padding: 56px 0 64px; }
   .hero .logo { width: min(100%, 420px); justify-self: center; filter: drop-shadow(0 18px 30px rgba(0,0,0,.25)); }
   .greet { font-size: clamp(17px, 2.1vw, 21px); font-weight: 700; line-height: 1.45; color: rgba(255,255,255,.95); }
@@ -87,11 +94,9 @@
   .incl li::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 0 4px #f7ecd0; flex: none; }
 
   /* ---------- Register & pay (big and readable on purpose) ---------- */
-  /* Lighter overlay so the Riviera course photo shows through; text shadows keep the heading readable. */
-  .pay { position: relative; color: #fff; padding: 64px 0; background: linear-gradient(180deg, rgba(20,23,128,.62) 0%, rgba(20,23,128,.45) 45%, rgba(20,23,128,.6) 100%), url('assets/riviera.jpg') center 60% / cover; }
-  .pay h2 { font-size: clamp(28px, 4vw, 40px); font-weight: 900; text-align: center; text-shadow: 0 2px 12px rgba(8,10,60,.65); }
-  .pay .sub { text-align: center; margin-top: 6px; color: #fff; font-weight: 700; text-shadow: 0 1px 8px rgba(8,10,60,.8); }
-  .pay-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 22px; margin-top: 30px; }
+  .pay { position: relative; color: #fff; padding: 64px 0; background: linear-gradient(180deg, var(--royal), var(--royal-deep)); }
+  .pay h2 { font-size: clamp(28px, 4vw, 40px); font-weight: 900; text-align: center; }
+  .pay .sub { text-align: center; margin-top: 6px; color: rgba(255,255,255,.9); font-weight: 600; }  .pay-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 22px; margin-top: 30px; }
   .pay .card { color: var(--ink); padding: 24px 26px; border: 0; }
   .pay h3 { font-size: 14px; font-weight: 900; letter-spacing: .14em; text-transform: uppercase; color: var(--royal); }
   .pay h3 small { display: block; font-size: 12px; letter-spacing: .04em; color: var(--label); text-transform: none; font-weight: 700; margin-top: 2px; }
@@ -130,8 +135,7 @@
     .details dd { font-size: 19px; }
     .incl li { font-size: 15px; padding: 12px; }
     .person { flex-wrap: wrap; }
-    .person .btn { width: 100%; }
-  }
+    .person .btn { width: 100%; }  }
 </style>
 </head>
 <body>
