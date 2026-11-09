@@ -87,9 +87,10 @@
   .incl li::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 0 4px #f7ecd0; flex: none; }
 
   /* ---------- Register & pay (big and readable on purpose) ---------- */
-  .pay { position: relative; color: #fff; padding: 64px 0; background: linear-gradient(180deg, rgba(20,23,128,.88), rgba(20,23,128,.94)), url('assets/riviera.jpg') center 60% / cover; }
-  .pay h2 { font-size: clamp(28px, 4vw, 40px); font-weight: 900; text-align: center; }
-  .pay .sub { text-align: center; margin-top: 6px; color: rgba(255,255,255,.85); font-weight: 600; }
+  /* Lighter overlay so the Riviera course photo shows through; text shadows keep the heading readable. */
+  .pay { position: relative; color: #fff; padding: 64px 0; background: linear-gradient(180deg, rgba(20,23,128,.62) 0%, rgba(20,23,128,.45) 45%, rgba(20,23,128,.6) 100%), url('assets/riviera.jpg') center 60% / cover; }
+  .pay h2 { font-size: clamp(28px, 4vw, 40px); font-weight: 900; text-align: center; text-shadow: 0 2px 12px rgba(8,10,60,.65); }
+  .pay .sub { text-align: center; margin-top: 6px; color: #fff; font-weight: 700; text-shadow: 0 1px 8px rgba(8,10,60,.8); }
   .pay-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 22px; margin-top: 30px; }
   .pay .card { color: var(--ink); padding: 24px 26px; border: 0; }
   .pay h3 { font-size: 14px; font-weight: 900; letter-spacing: .14em; text-transform: uppercase; color: var(--royal); }
